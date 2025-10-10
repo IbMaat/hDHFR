@@ -225,7 +225,7 @@ with tab4:
 #                   Model Performance
 # ============================================================
 with tab5:
-    st.header("⚙️ Model Performance Summary")
+    st.header("Model Performance Summary")
     st.markdown("""
     All models were trained using **Random Forest Regression** with **RFE-RFR** feature selection.  
     | Model | Train R² | Test R² |
@@ -260,7 +260,7 @@ with tab7:
     st.markdown("""
     The **hDHFR-Pred** application was developed by the **Natural Products Team**,  
     Laboratory of Life and Health Sciences, Faculty of Medicine and Pharmacy,  
-    **University of Abdelmalek Essaadi, Tangier.**
+    **University of Abdelmalek Essaadi, Tetouan.**
     """)
 
 
@@ -274,6 +274,7 @@ with tab8:
     and data exchange projects in computational drug discovery, molecular docking,  
     and QSAR modeling.
     
-    📬 **Contact:** ibrahim.maattallaoui@etu.uae.ac.ma 
+    **Contact:** ibrahim.maattallaoui@etu.uae.ac.ma 
     """)
+
 
