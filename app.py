@@ -7,7 +7,7 @@ import subprocess
 import os
 
 # ============================================================
-#                   🎨 Custom Styling
+#                   Custom Styling
 # ============================================================
 st.markdown("""
     <style>
@@ -51,9 +51,9 @@ st.markdown("""
 
 
 # ============================================================
-#                   🧬 Title and Intro
+#                   Title and Intro
 # ============================================================
-st.title("🧠 hDHFR Bioactivity Prediction App")
+st.title("hDHFR Bioactivity Prediction App")
 st.markdown("""
     <h2 style="color: #27ae60;">Predict Inhibitory Activity Against hDHFR</h2>
     <p style="font-size:16px;">This web app predicts the bioactivity (pIC₅₀) of small molecules against the
@@ -62,16 +62,16 @@ st.markdown("""
 
 
 # ============================================================
-#                   📑 Tab Layout
+#                   Tab Layout
 # ============================================================
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
     "Main", "Logo", "What is hDHFR?", "Dataset",
-    "Model Performance", "Python Libraries", "Application Developers", "🤝 Collaboration & Contact"
+    "Model Performance", "Python Libraries", "Application Developers", "Collaboration & Contact"
 ])
 
 
 # ============================================================
-#                   ⚙️ Helper Functions
+#                   Helper Functions
 # ============================================================
 @st.cache_resource
 def load_models():
@@ -122,7 +122,7 @@ def filedownload(df):
     """Generate download link for predictions."""
     csv = df.to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode()
-    href = f'<a href="data:file/csv;base64,{b64}" download="prediction.csv">📥 Download Predictions</a>'
+    href = f'<a href="data:file/csv;base64,{b64}" download="prediction.csv">Download Predictions</a>'
     return href
 
 
@@ -134,7 +134,7 @@ def build_model(input_data, model, smiles):
             "Molecule": [smiles],
             "Predicted pIC50": prediction
         })
-        st.success("✅ Prediction completed successfully!")
+        st.success("Prediction completed successfully!")
         st.dataframe(df, use_container_width=True)
         st.markdown(filedownload(df), unsafe_allow_html=True)
     except Exception as e:
@@ -142,11 +142,11 @@ def build_model(input_data, model, smiles):
 
 
 # ============================================================
-#                   🧪 Main Tab (Prediction)
+#                   Main Tab (Prediction)
 # ============================================================
 with tab1:
     st.markdown("<div class='main'>", unsafe_allow_html=True)
-    st.header("🧩 Model-Based Bioactivity Prediction")
+    st.header("Model-Based Bioactivity Prediction")
     st.info("Choose a model and input a SMILES string to predict hDHFR inhibitory activity.")
 
     selected = st.selectbox(
@@ -162,7 +162,7 @@ with tab1:
 
     models = load_models()
 
-    if models and st.button("🚀 Predict Bioactivity"):
+    if models and st.button("Predict Bioactivity"):
         if userinput.strip():
             model_key = "PubChem" if "PubChem" in selected else \
                         "Substructure" if "Substructure" in selected else "MACCS"
@@ -170,7 +170,7 @@ with tab1:
             descriptor_file = calculate_descriptors(userinput, model_key)
             if descriptor_file and os.path.exists(descriptor_file):
                 desc = pd.read_csv(descriptor_file)
-                st.subheader("📊 Calculated Molecular Descriptors")
+                st.subheader("Calculated Molecular Descriptors")
                 st.dataframe(desc.head(), use_container_width=True)
 
                 try:
@@ -185,10 +185,10 @@ with tab1:
 
 
 # ============================================================
-#                   🖼️ Logo Tab
+#                   Logo Tab
 # ============================================================
 with tab2:
-    st.header("🧬 Project Logo")
+    st.header("Project Logo")
     if os.path.exists("Logo.png"):
         st.image("Logo.png", use_container_width=False, width=400)
     else:
@@ -196,10 +196,10 @@ with tab2:
 
 
 # ============================================================
-#                   📖 What is hDHFR?
+#                   What is hDHFR?
 # ============================================================
 with tab3:
-    st.header("🧠 What is hDHFR?")
+    st.header("What is hDHFR?")
     st.markdown("""
     Dihydrofolate reductase (**DHFR**) is an enzyme crucial for folate metabolism,
     catalyzing the reduction of dihydrofolate (DHF) to tetrahydrofolate (THF).
@@ -210,10 +210,10 @@ with tab3:
 
 
 # ============================================================
-#                   📊 Dataset
+#                   Dataset
 # ============================================================
 with tab4:
-    st.header("📚 Dataset Information")
+    st.header("Dataset Information")
     st.write("""
     The dataset was curated from the **ChEMBL** database, focusing on compounds tested against
     the human dihydrofolate reductase (**hDHFR**) enzyme.  
@@ -222,7 +222,7 @@ with tab4:
 
 
 # ============================================================
-#                   📈 Model Performance
+#                   Model Performance
 # ============================================================
 with tab5:
     st.header("⚙️ Model Performance Summary")
@@ -239,10 +239,10 @@ with tab5:
 
 
 # ============================================================
-#                   🐍 Python Libraries
+#                   Python Libraries
 # ============================================================
 with tab6:
-    st.header("📦 Python Libraries Used")
+    st.header("Python Libraries Used")
     st.markdown("""
     - `streamlit` — UI framework for interactive web apps  
     - `pandas` — data manipulation and analysis  
@@ -253,10 +253,10 @@ with tab6:
 
 
 # ============================================================
-#                   👩‍🔬 Developers
+#                   Developers
 # ============================================================
 with tab7:
-    st.header("👩‍🔬 Application Developers")
+    st.header("Application Developers")
     st.markdown("""
     The **hDHFR-Pred** application was developed by the **Natural Products Team**,  
     Laboratory of Life and Health Sciences, Faculty of Medicine and Pharmacy,  
@@ -265,15 +265,15 @@ with tab7:
 
 
 # ============================================================
-#                   🤝 Collaboration & Contact
+#                   Collaboration & Contact
 # ============================================================
 with tab8:
-    st.header("🤝 Collaboration & Contact")
+    st.header("Collaboration & Contact")
     st.markdown("""
     We are open to **scientific collaboration**, co-development of tools,  
     and data exchange projects in computational drug discovery, molecular docking,  
     and QSAR modeling.
     
     📬 **Contact:** ibrahim.maattallaoui@etu.uae.ac.ma 
-    💡 Let's work together to accelerate drug discovery!
     """)
+
