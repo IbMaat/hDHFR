@@ -121,5 +121,10 @@ st.markdown("""
 st.header("📩 Contact")
 st.markdown("""
 For inquiries or collaborations, please contact:  
-**ibrahim.maattallaoui@uae.ac.ma**
+**ibrahim.maattallaoui@etu.uae.ac.ma**
 """)
+
+# ============== TEAM NAME ==============
+st.header("👨‍💻 Team")
+st.markdown("**Natural Products Team, Laboratory of Life and Health Sciences, Faculty of Medicine and Pharmacy, University of Abdelmalek Essaadi, Tangier**")
+
