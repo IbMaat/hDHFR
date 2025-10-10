@@ -36,7 +36,7 @@ col1, col2, col3 = st.columns([1, 3, 1])
 with col2:
     st.image("Logo.png", use_container_width=True)
 
-st.markdown("<h2 style='text-align:center; color:#333;'>QSAR Bioactivity Prediction Platform</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align:center; color:#333;'>hDHFR Bioactivity Prediction Platform</h2>", unsafe_allow_html=True)
 st.write("---")
 
 # ============== SIDEBAR ==============
@@ -99,7 +99,7 @@ st.write("---")
 # ============== INFORMATION SECTIONS ==============
 st.header("📘 About This App")
 st.markdown("""
-This application predicts the **bioactivity (pIC₅₀)** of chemical compounds 
+This application predicts the **bioactivity (pIC₅₀)** against **hDHFR enzyme** of chemical compounds 
 using pre-trained **QSAR models** built from molecular descriptor datasets.
 """)
 
@@ -127,4 +127,5 @@ For inquiries or collaborations, please contact:
 # ============== TEAM NAME ==============
 st.header("👨‍💻 Team")
 st.markdown("**Natural Products Team, Laboratory of Life and Health Sciences, Faculty of Medicine and Pharmacy, University of Abdelmalek Essaadi, Tangier**")
+
 
