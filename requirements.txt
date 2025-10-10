@@ -3,7 +3,3 @@ scikit-learn==1.6.0
 pandas==2.2.2
 pillow==10.4.0
 scikit-learn==1.6.0
-pandas
-rdkit-pypi
-pillow
-joblib
