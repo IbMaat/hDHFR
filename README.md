@@ -1,6 +1,6 @@
-# hDHFR-Prediction: Bioactivity Prediction App
+# hDHFR: Bioactivity Prediction App
 
-DHFR-Pred is a web-based application designed to predict the inhibitory bioactivity (pIC50) of small molecules against human dihydrofolate reductase (hDHFR) using robust machine learning models.
+hDHFR is a web-based application designed to predict the inhibitory bioactivity (pIC50) of small molecules against human dihydrofolate reductase (hDHFR) using robust machine learning models.
 
 ---
 
@@ -17,7 +17,6 @@ DHFR-Pred is a web-based application designed to predict the inhibitory bioactiv
 - Understand the limitations and applicability domain of the models
 - Access collaboration and contact information
 
----
 
 ## Limitations
 
@@ -45,5 +44,18 @@ DHFR-Pred is a web-based application designed to predict the inhibitory bioactiv
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/hDHFR-Prediction.git
-cd hDHFR-Prediction
+git clone https://github.com/your/hDHFR.git
+cd hDHFR
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Run the app:
+
+streamlit run app.py
+
+
+Open the app in your browser at http://localhost:8501.
