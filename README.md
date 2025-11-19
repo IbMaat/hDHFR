@@ -44,7 +44,7 @@ hDHFR is a web-based application designed to predict the inhibitory bioactivity 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your/hDHFR.git
+git clone https://github.com/IbMaat/hDHFR.git
 cd hDHFR
 
 
